@@ -1,12 +1,8 @@
 # Imports
-import datetime as dt
-import csv, random, os # numpy
-
-# now = dt.datetime.now()
-# print("The time right now is ", now)
+import csv, os 
 
 file_path_read = os.path.join("resources", "election_results.csv")
-file_path_save = os.path.join("analysis", "election_analysis.txt")
+file_path_write = os.path.join("analysis", "election_analysis.txt")
 
 total_votes = 0
 winning_count = 0
@@ -29,7 +25,7 @@ winning_percentage = 50
 winning_count = total_votes * 0.50
 
 # Using the with statement open the file as a text file.
-with open(file_path_save, "w") as analysis_file:
+with open(file_path_write, "w") as analysis_file:
     analysis_file.write(f"Election Results\n-------------------------\n")
     analysis_file.write(f"Total votes: {total_votes:,}\n-------------------------\n")
 
